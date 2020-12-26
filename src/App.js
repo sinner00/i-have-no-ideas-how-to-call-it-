@@ -1,8 +1,6 @@
 import React, {useState} from 'react'
 import styled from "styled-components";
 import RightSide from "./Main/RightSide/RightSide";
-
-import BurgerMenu from "./BurgerMenu";
 import Navigaton from "./Main/LeftSide/Navigation";
 const Markup = styled.div `
 height: 100vh;
@@ -11,15 +9,15 @@ display: flex;
 `;
 
 function App() {
-    const [setOpen, open  ] = useState(false);
+    const [open, setOpen  ] = useState(false);
 
   return (
       <>
   <Markup   className='container-fluid'>
-     {setOpen&&
-      <Navigaton/>
+     {open &&
+      <Navigaton open={open}/>
   }
-      <RightSide handler={()=> open(true)}/>
+      <RightSide open={open} handler={()=> setOpen(!open)}/>
   </Markup>
 
     </>

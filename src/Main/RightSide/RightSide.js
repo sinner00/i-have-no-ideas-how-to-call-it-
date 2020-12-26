@@ -1,18 +1,5 @@
-import React, {useState} from "react";
-import styled from "styled-components";
+import React from "react";
 import BurgerMenu from "../../BurgerMenu";
 
-const Main = styled.div`
-height: 100vh;
-width: 70%;
-`;
-function RightSide({open}) {
+export default ({ handler, open}) => <BurgerMenu handler={handler} open={open} />;
 
-return (
-    <>
-    <Main open={open}> </Main>
-    <BurgerMenu open={open} />
-    </>
-)
-}
-export default RightSide;

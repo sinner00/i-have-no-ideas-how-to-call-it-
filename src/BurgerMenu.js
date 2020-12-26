@@ -1,11 +1,10 @@
 import React  from "react";
 import styled  from 'styled-components';
-import Navigaton from "./Main/LeftSide/Navigation";
 
 const StyledBurger = styled.div `
 flex-flow: nowrap;
 position: fixed;
-left: 30px;
+right: 30px;
 top: 40px;
 display: block;
 z-index: 10;
@@ -22,27 +21,27 @@ background-color: black;
 margin-bottom: 3px;
 
   &:nth-child(1) {
-      transform: ${({ handler }) => handler ? 'rotate(45deg)' : 'rotate(0)'};
-      transition: 0.5s linear;
+      transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
+      transition: 0.1s linear;
     }
     &:nth-child(2) {
-      transform: ${({ handler }) => handler ? 'translateX(100%)' : 'translateX(0)'};
-      opacity: ${({ handler }) => handler ? 0 : 1};
-      transition: 0.5s linear;
+      transform: ${({ open }) => open ? 'translateX(100%)' : 'translateX(0)'};
+      opacity: ${({ open }) => open ? 0 : 1};
+      transition: 0.1s linear;
     }
     &:nth-child(3) {
-      transform: ${({ handler }) => handler ? 'rotate(-45deg)' : 'rotate(0)'};
-      transition: 0.5s linear;
+      transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
+      transition: 0.1s linear;
 
 }
 
 
 `;
-const BurgerMenu = ({handler}) => {
+const BurgerMenu = ({ handler, open }) => {
 
     return  (
 
-        <StyledBurger onClick={handler} >
+        <StyledBurger open={open} onClick={handler} >
             <div className='d-block' > </div>
             <div className="col-12 d-block" > </div>
             <div className="col-12" > </div>
