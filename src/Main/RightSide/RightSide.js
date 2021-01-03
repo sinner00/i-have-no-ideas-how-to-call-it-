@@ -1,18 +1,22 @@
-import React, {useState} from "react";
+import React from "react";
 import styled from "styled-components";
 import BurgerMenu from "../../BurgerMenu";
+import Header from "./Header";
 
 const Main = styled.div`
 height: 100vh;
-width: 70%;
+width: 100%;
+display: flex;
+overflow: hidden;
 `;
-function RightSide({open}) {
+function RightSide({open, openFunction, lol, lolo}) {
 
 return (
-    <>
-    <Main open={open}> </Main>
-    <BurgerMenu open={open} />
-    </>
+
+<Main open = {open } openFunction={openFunction}>
+<Header openFunction={openFunction} open={open} lol={lol} lolo={lolo}/>
+</Main>
+
 )
 }
 export default RightSide;

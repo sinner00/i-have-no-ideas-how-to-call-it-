@@ -1,51 +1,79 @@
 import React  from "react";
 import styled  from 'styled-components';
-import Navigaton from "./Main/LeftSide/Navigation";
+
 
 const StyledBurger = styled.div `
+{
 flex-flow: nowrap;
-position: fixed;
-left: 30px;
 top: 40px;
-display: block;
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 z-index: 10;
+padding-right: 5px;
+overflow: hidden;
+cursor: pointer;
+height: 100%;
+width: 100%;
 
 
 
 
-div {
+
+
+
+
+.s {
+
+cursor: pointer;
 height: 0.25rem;
 width: 25px;
 border-radius: 10px;
 transform-origin:2.5px;
 background-color: black;
-margin-bottom: 3px;
+margin-bottom: 2px;
+position: relative;
 
-  &:nth-child(1) {
-      transform: ${({ handler }) => handler ? 'rotate(45deg)' : 'rotate(0)'};
-      transition: 0.5s linear;
-    }
-    &:nth-child(2) {
-      transform: ${({ handler }) => handler ? 'translateX(100%)' : 'translateX(0)'};
-      opacity: ${({ handler }) => handler ? 0 : 1};
-      transition: 0.5s linear;
-    }
-    &:nth-child(3) {
-      transform: ${({ handler }) => handler ? 'rotate(-45deg)' : 'rotate(0)'};
-      transition: 0.5s linear;
+
+}
+.s::before{
+width: 100%;
+height: 100%;
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+z-index: 2;
+transition: transform  300ms ease-in-out;
+background-color: red;
+transform: scaleX(0);
+transform-origin: left;
+}
+&:hover {
+.s:hover::before 
+transform: scaleX(1);
+background-color: yellow;
+}
+}
 
 }
 
 
+
 `;
-const BurgerMenu = ({handler}) => {
+const BurgerMenu = ({ lol ,openFunction }) => {
+                console.log( lol);
+
 
     return  (
 
-        <StyledBurger onClick={handler} >
-            <div className='d-block' > </div>
-            <div className="col-12 d-block" > </div>
-            <div className="col-12" > </div>
+        <StyledBurger slider= {lol} onClick={openFunction}
+                      className="BurgerMenuStyle" >
+
+            <div className='d-block s sa' > </div>
+            <div className="col-12 s d-block sb" > </div>
+            <div className="col-12 s sc" > </div>
         </StyledBurger>
 
     )
