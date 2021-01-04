@@ -45,16 +45,35 @@ position: absolute;
 top: 0;
 left: 0;
 z-index: 2;
-transition: transform  300ms ease-in-out;
+
 background-color: red;
 transform: scaleX(0);
 transform-origin: left;
 }
-&:hover {
-.s:hover::before 
+&:hover .sa::before{
+
 transform: scaleX(1);
 background-color: yellow;
+transition: transform  300ms ease-in-out
+
+
 }
+&:hover .sb::before{
+
+transform: scaleX(1);
+background-color: yellow;
+transition: transform  450ms ease-in-out
+
+
+}
+
+&:hover .sc::before{
+
+transform: scaleX(1);
+background-color: yellow;
+transition: transform  550ms ease-in-out
+
+
 }
 
 }
