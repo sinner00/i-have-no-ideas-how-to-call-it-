@@ -37,6 +37,20 @@ position: relative;
 
 
 }
+
+.sa::before {
+    transition: transform 500ms ease-out;
+}
+
+.sb::before {
+    transition: transform 400ms ease-out;
+}
+
+.sc::before {
+    transition: transform 300ms ease-out;
+}
+
+
 .s::before{
 width: 100%;
 height: 100%;
@@ -45,8 +59,7 @@ position: absolute;
 top: 0;
 left: 0;
 z-index: 2;
-
-background-color: red;
+background-color: yellow;
 transform: scaleX(0);
 transform-origin: left;
 }
