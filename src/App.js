@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import styled from "styled-components";
 import RightSide from "./Main/RightSide/RightSide";
 import Navigation from "./Main/LeftSide/Navigation";
+import Side from "./Main/RightSideWrapper";
 
 const Markup = styled.div `
 height: 100vh;
@@ -56,7 +57,6 @@ transform: scaleX(1);
 
 
 
-
 `;
 
 function App() {
@@ -71,15 +71,8 @@ function App() {
   <Markup    className='container-fluid' >
 
       <Navigation handler={open} openFunction={openFunction}/>
+     <Side open={open} openFunction={openFunction} lol={lol} lolo={lolo}/>
 
-       <RightSide  open={open} openFunction={openFunction} lol ={lol} lolo={lolo}/>
-
-<a className='nav'>
-    <div className='one w' > </div>
-    <div className='second w'> </div>
-    <div className='three w'> </div>
-
-</a>
 
 
 

@@ -11,7 +11,7 @@ display: flex;
     
     
     .Wrapper_Burger {
-    width: 20%;
+    width: 30%;
     height: 100%;
     display: flex;
     border: 1px solid black;
@@ -49,6 +49,9 @@ display: flex;
    vertical-align: center;
    
    }
+   .menu {
+   
+   }
 `;
 function Header({open, openFunction, lol, lolo}) {
  return (
@@ -57,7 +60,7 @@ function Header({open, openFunction, lol, lolo}) {
          <div className='row styledHeader_child'>
          <div className='col-lg-1 Wrapper_Burger'  >
              <BurgerMenu openFunction={openFunction} slider={open} lol={lol} lolo={lolo} />
-             <p>Menu</p>
+             <p className='menu'>Menu</p>
          </div>
          <div className="col-lg-7 second" > 2 </div>
          <div className="col-lg-3 second"  > 3 wertyuiop[sdfghjkdfgh dsfgbvhmnl.adsdcfvhmnlasdfghjkl;SADFGHJKL;container</div>

@@ -1,0 +1,35 @@
+[33mcommit aa02d318c918d136dc62e7f919ee7fc678d36637[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Taras Bashuryn <tarasbashuryn@Tarass-iMac.local>
+Date:   Tue Jan 12 17:44:11 2021 +0200
+
+    fix burger spans transition
+
+[33mcommit 54c1ef126ab9f42feb0f5afdeb7dd80e4079df3a[m
+Author: Your Name <vlodko1993.gmail.com>
+Date:   Mon Jan 4 08:11:36 2021 +0300
+
+    at last it happend
+
+[33mcommit 646ad879ddd6e59a1a8e45d85993e131b464c14e[m
+Author: Your Name <vlodko1993.gmail.com>
+Date:   Sun Jan 3 23:19:54 2021 +0300
+
+    new
+
+[33mcommit 5c85f0dc7269191b2822ff4fb37cc65c3a13c3c2[m
+Author: Your Name <vlodko1993.gmail.com>
+Date:   Sun Jan 3 23:08:35 2021 +0300
+
+    any changes only bullshit
+
+[33mcommit 65eb472e1915df39fec327f5d4fab1ac87d76fc3[m
+Author: Your Name <vlodko1993.gmail.com>
+Date:   Thu Dec 24 21:12:02 2020 +0300
+
+    Initial commit.
+
+[33mcommit 74e3d4a2552ca06666708cab5e9e31cd6d59bc5e[m
+Author: Your Name <vlodko1993.gmail.com>
+Date:   Sat Nov 21 22:23:10 2020 +0300
+
+    Initialize project using Create React App

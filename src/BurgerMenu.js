@@ -59,14 +59,15 @@ position: absolute;
 top: 0;
 left: 0;
 z-index: 2;
-background-color: yellow;
+background-color: lightgrey;
 transform: scaleX(0);
 transform-origin: left;
+border-radius: 50%;
 }
 &:hover .sa::before{
 
 transform: scaleX(1);
-background-color: yellow;
+background-color: lightgrey;
 transition: transform  300ms ease-in-out
 
 
@@ -74,7 +75,7 @@ transition: transform  300ms ease-in-out
 &:hover .sb::before{
 
 transform: scaleX(1);
-background-color: yellow;
+background-color: lightgrey;
 transition: transform  450ms ease-in-out
 
 
@@ -83,7 +84,7 @@ transition: transform  450ms ease-in-out
 &:hover .sc::before{
 
 transform: scaleX(1);
-background-color: yellow;
+background-color: lightgrey;
 transition: transform  550ms ease-in-out
 
 

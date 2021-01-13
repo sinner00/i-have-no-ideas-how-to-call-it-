@@ -5,9 +5,14 @@ import Header from "./Header";
 
 const Main = styled.div`
 height: 100vh;
-width: 100%;
 display: flex;
 overflow: hidden;
+transition: 300ms ease-in; 
+transform-origin: left;
+width: 100%;
+position: absolute;
+z-index: ${({open})=>open ? -2 : 0};
+opacity: ${({open})=>open ? 0.3 : 1};
 `;
 function RightSide({open, openFunction, lol, lolo}) {
 
