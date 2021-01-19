@@ -1,21 +1,15 @@
 import React, { useState, useRef } from "react"
 import styled from "styled-components";
-
-
 import Navigation from "./Main/LeftSide/Navigation";
 import Side from "./Main/RightSideWrapper";
 import useOnClickOutside from "./Main/useOnClickOutside";
-
-
 const Markup = styled.div `
 height: 100vh;
 width: 100%;
 display: flex;
-
 .div {
         height: 100vh;
         width: 70%;
-
 }
 .lk {
 height: 70px;
@@ -63,7 +57,7 @@ function App() {
   const [isModalOpen, setModalOpen] = useState(false);
   const ref = useRef();
 
-  useOnClickOutside(ref, () => console.log("hello"));
+  useOnClickOutside(ref, () => setModalOpen(false));
 
   return (
     <Markup className="container-fluid" >
@@ -74,7 +68,7 @@ function App() {
           setModalOpen={() => setModalOpen(false)}
         /> :
 
-        <Side switcher={() => setModalOpen(true)} />
+        <Side switcher={() => setModalOpen(true) } isModalOpen={isModalOpen} />
 
       }
     </Markup>

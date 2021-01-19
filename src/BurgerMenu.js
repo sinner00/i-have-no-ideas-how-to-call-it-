@@ -1,5 +1,5 @@
-import React  from "react";
-import styled  from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 
 const StyledBurger = styled.div `
@@ -88,27 +88,22 @@ background-color: lightgrey;
 transition: transform  550ms ease-in-out
 
 
-}
-
-}
-
-
 
 `;
 const BurgerMenu = ({ openFunction }) => {
 
 
-    return  (
+  return (
 
-        <StyledBurger  onClick={openFunction}
-                      className="BurgerMenuStyle" >
+    <StyledBurger onClick={openFunction}
+      className="BurgerMenuStyle" >
 
-            <div className='d-block s sa' > </div>
-            <div className="col-12 s d-block sb" > </div>
-            <div className="col-12 s sc" > </div>
-        </StyledBurger>
+      <div className="d-block s sa" > </div>
+      <div className="col-12 s d-block sb" > </div>
+      <div className="col-12 s sc" > </div>
+    </StyledBurger>
 
-    )
+  )
 
 
 };

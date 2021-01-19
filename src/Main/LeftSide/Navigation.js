@@ -4,13 +4,13 @@ import React from "react";
 
 
 const Ul = styled.ul `
-text-decoration: none;
-list-style: none;
-height: 100vh;
-overflow: scroll;
-width : ${({ isModalOpen }) => (isModalOpen ? "30%" : "0")};
-transform-origin: left;
-transition:  300ms ease-in;
+  text-decoration: none;
+  list-style: none;
+  height: 100vh;
+  overflow: scroll;
+  width : ${({ isModalOpen }) => (isModalOpen ? "30%" : "0")};
+  transform-origin: left;
+  transition:  300ms ease-in;
 
 
 
@@ -25,110 +25,110 @@ transition:  300ms ease-in;
 li {
 
 
-text-decoration: none;
-list-style: none;
-text-align: left;
- padding-left: 3rem;
- height: 4rem;
- align-items: center;
-background-color: #ecebeb;
-overflow: visible;
-border-bottom: 1px solid darkgray ;
+  text-decoration: none;
+  list-style: none;
+  text-align: left;
+  padding-left: 3rem;
+  height: 4rem;
+  align-items: center;
+  background-color: #ecebeb;
+  overflow: visible;
+  border-bottom: 1px solid darkgray ;
 
- &:hover {
-background: white;
-transition: 0.5s linear;
-cursor: pointer;
+  &:hover {
+    background: white;
+    transition: 0.5s linear;
+    cursor: pointer;
 
-}
+  }
 
 };
- 
+
 
 
 
 a {
-list-style: none;
-text-decoration: none;
-font-size:20px;
-color: black;
-overflow: visible;
+  list-style: none;
+  text-decoration: none;
+  font-size:20px;
+  color: black;
+  overflow: visible;
 
 
 }
 .switcher{
-    display: flex;
-    justify-content: space-between;
-    
+  display: flex;
+  justify-content: space-between;
+
 }
 
 
 
 .close {
-    width: 60%;
-    display: flex;
-    justify-content: space-evenly; 
-    height: 100%;
-    
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  height: 100%;
+
 }
 .hydrated {
-height: 100%;
-font-size: 30px;
+  height: 100%;
+  font-size: 30px;
 }
 .hydrated:hover {
-color: lightgrey;
-transition: 200ms;
+  color: lightgrey;
+  transition: 200ms;
 }
 .textClose{
-height: 100%;
-display: flex;
-align-items: center;
-font-size: 15px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
 }
 .switcher:hover{
-background:  #ecebeb;
-transition: none;
+  background:  #ecebeb;
+  transition: none;
 }
 .language {
-font-size: 15px;
+  font-size: 15px;
 
 }
 .language_wrapper{
-border-bottom: 1px solid black;
-position: relative;
+  border-bottom: 1px solid black;
+  position: relative;
 
 }
 .language_wrapper::before
- {
- position: absolute;
-content: "";
-transform: scaleX(0);
-transform-origin: left;
-z-index: 2;
-width: 100%;
-height: 100%;
+{
+  position: absolute;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
 
 
 }
 
- .language_wrapper:hover::before {
- transform: scaleX(1);
- border-bottom: 1px solid white;
- transition: transform 400ms ease-in ;
+.language_wrapper:hover::before {
+  transform: scaleX(1);
+  border-bottom: 1px solid white;
+  transition: transform 400ms ease-in ;
 
- }
+}
 .wrap1::before {
-border-bottom: 1px solid black;
-transition: 500ms ease-out;
+  border-bottom: 1px solid black;
+  transition: 500ms ease-out;
 }
 .textClose:hover {
-color: lightgrey;
-transition: 200ms;
+  color: lightgrey;
+  transition: 200ms;
 }
 .lola:hover {
-color: lightgrey;
-transition: 200ms;
-background-color: lightgrey;
+  color: lightgrey;
+  transition: 200ms;
+  background-color: lightgrey;
 }
 
 
@@ -137,17 +137,20 @@ background-color: lightgrey;
 
 // eslint-disable-next-line react/prop-types
 function Navigation({ isModalOpen, setModalOpen, sideRef }) {
+console.log(isModalOpen)
+    console.log(setModalOpen)
+    console.log(sideRef)
 
-  return (
+    return (
 
     <Ul ref={sideRef} className=" row no-gutters NavUl" isModalOpen={isModalOpen} >
       <li className=" col-md-12 NavList switcher" >
         <a href="/" className="language">
           <p className="language_wrapper wrap1">
-          English
+                        English
           </p>
         </a>
-        <button href="/" onClick={setModalOpen} className="close">
+        <button onClick={setModalOpen} className="close">
           <p className="textClose">CLOSE</p>
           <ion-icon className="lola" name="close-outline"> </ion-icon>
         </button>

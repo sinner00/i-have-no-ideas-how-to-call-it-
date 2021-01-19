@@ -3,27 +3,27 @@ import BurgerMenu from "../../BurgerMenu";
 import styled from "styled-components";
 
 const StyledHeader = styled.div `
-width: 100%;
-display: flex;
-    justify-content: start;
-    align-items: center;
-    height: 5rem;
-    
-    
-    .Wrapper_Burger {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 5rem;
+
+
+  .Wrapper_Burger {
     width: 30%;
     height: 100%;
     display: flex;
     border: 1px solid black;
     justify-content: center;
-    align-items: center; 
-    
-    
-   
-    }
-    
-    .second {
-  
+    align-items: center;
+
+
+
+  }
+
+  .second {
+
     width: 100%;
     justify-content: center;
     text-align: center;
@@ -31,27 +31,27 @@ display: flex;
     overflow: hidden;
     display: inline;
     white-space: nowrap;
-    
-    
-    }
-    .styledHeader_child {
+
+
+  }
+  .styledHeader_child {
     display: inline-flex;
     width: 100%;
     height: 100%;
     align-items: center;
-    }
-   .parent_container {
-   width: 100%;
-   height: 100%;
-   }
-   .BurgerMenuStyle{
-   padding-right: 5px;
-   vertical-align: center;
-   
-   }
-   .menu {
-   
-   }
+  }
+  .parent_container {
+    width: 100%;
+    height: 100%;
+  }
+  .BurgerMenuStyle{
+    padding-right: 5px;
+    vertical-align: center;
+
+  }
+  .menu {
+
+  }
 `;
 function Header({ open, openFunction, lol, lolo, switcher }) {
   return (
