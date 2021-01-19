@@ -63,9 +63,7 @@ function App() {
   const [isModalOpen, setModalOpen] = useState(false);
   const ref = useRef();
 
-  useOnClickOutside(ref, () => setModalOpen(false));
-
-  const switcher = () => setModalOpen(true);
+  useOnClickOutside(ref, () => console.log("hello"));
 
   return (
     <Markup className="container-fluid" >
@@ -76,7 +74,7 @@ function App() {
           setModalOpen={() => setModalOpen(false)}
         /> :
 
-        <Side switcher={switcher} />
+        <Side switcher={() => setModalOpen(true)} />
 
       }
     </Markup>
