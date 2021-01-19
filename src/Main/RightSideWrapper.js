@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useRef} from "react"
 import styled from "styled-components"
 import RightSide from "./RightSide/RightSide";
 
@@ -10,10 +10,11 @@ position: relative;
 `
 ;
 
-function Side({open, openFunction, lol, lolo}) {
+function Side({open, openFunction, lol, lolo }) {
+    const myRef = useRef()
     return(
-    <StyledWrapper>
-        <RightSide  open={open} openFunction={openFunction} lol ={lol} lolo={lolo}/>
+    <StyledWrapper ref={myRef} >
+        <RightSide  open={open} openFunction={openFunction} lol ={lol} lolo={lolo}  />
     </StyledWrapper>
     )
 }

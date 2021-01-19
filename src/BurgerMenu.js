@@ -95,13 +95,12 @@ transition: transform  550ms ease-in-out
 
 
 `;
-const BurgerMenu = ({ lol ,openFunction }) => {
-                console.log( lol);
+const BurgerMenu = ({ openFunction }) => {
 
 
     return  (
 
-        <StyledBurger slider= {lol} onClick={openFunction}
+        <StyledBurger  onClick={openFunction}
                       className="BurgerMenuStyle" >
 
             <div className='d-block s sa' > </div>

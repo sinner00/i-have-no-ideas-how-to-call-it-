@@ -1,7 +1,6 @@
 
 import styled from "styled-components";
 import React  from 'react';
-import BurgerMenu from "../../BurgerMenu";
 
 
 
@@ -140,18 +139,19 @@ background-color: lightgrey;
 
 
 
-function Navigation({handler , openFunction}) {
-return (
+function Navigation({handler , openFunction, list }){
 
 
-    <Ul className=" row no-gutters NavUl" handler={handler} >
+    return (
+
+    <Ul className=" row no-gutters NavUl" handler={handler}  list={list} >
       <li className=" col-md-12 NavList switcher" >
-        <a className='language'>
+        <a href="/" className='language'>
           <p className='language_wrapper wrap1'>
           English
           </p>
         </a>
-        <a  onClick={openFunction} className='close'>
+        <a  href="/" onClick={openFunction} className='close'>
             <p className='textClose'>CLOSE</p>
          <ion-icon className='lola' name="close-outline"> </ion-icon>
 

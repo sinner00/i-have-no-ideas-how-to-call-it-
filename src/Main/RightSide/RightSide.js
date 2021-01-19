@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import BurgerMenu from "../../BurgerMenu";
 import Header from "./Header";
 
 const Main = styled.div`

@@ -1,8 +1,11 @@
-import React, {useState} from 'react'
+import React, {useState, useRef} from 'react'
 import styled from "styled-components";
-import RightSide from "./Main/RightSide/RightSide";
+
+
 import Navigation from "./Main/LeftSide/Navigation";
 import Side from "./Main/RightSideWrapper";
+import useOnClickOutside from "./Main/useOnClickOutside";
+
 
 const Markup = styled.div `
 height: 100vh;
@@ -57,32 +60,39 @@ transform: scaleX(1);
 
 
 
+
+
+
 `;
 
 function App() {
     const [open, setOpen  ] = useState(false);
     const [lol, lolOpen] = useState(false);
     const openFunction = () => setOpen(!open);
-    const lolo = () => lolOpen(!lol);
-
-
-  return (
-
-  <Markup    className='container-fluid' >
-
-      <Navigation handler={open} openFunction={openFunction}/>
-     <Side open={open} openFunction={openFunction} lol={lol} lolo={lolo}/>
-
+    const lolo = () => lolOpen(!lol) ;
+    const ref = useRef();
+    // State for our modal
+    const [isModalOpen, setModalOpen] = useState(false);
+    // Call hook passing in the ref and a function to call on outside click
+    useOnClickOutside(ref, () => setModalOpen(false));
+          const switcher =  setModalOpen(true)
 
 
 
 
+    return (
+  <Markup    className='container-fluid'   >
+      {isModalOpen ?
+      < Navigation handler={open} openFunction={openFunction} onClick={switcher}/>    :
 
+          < Side open={open} openFunction={openFunction} lol={lol} lolo={lolo} ref={ref} />
 
+      }
   </Markup>
 
 
   );
+
 }
 
 export default App;
