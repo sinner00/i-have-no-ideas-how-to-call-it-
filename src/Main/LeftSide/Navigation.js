@@ -1,16 +1,14 @@
 
 import styled from "styled-components";
-import React  from 'react';
+import React from "react";
 
 
-
-
-const Ul= styled.ul `
+const Ul = styled.ul `
 text-decoration: none;
 list-style: none;
 height: 100vh;
 overflow: scroll;
-width : ${({handler})=> handler ? "30%":"0"};
+width : ${({ isModalOpen }) => (isModalOpen ? "30%" : "0")};
 transform-origin: left;
 transition:  300ms ease-in;
 
@@ -137,46 +135,37 @@ background-color: lightgrey;
 `;
 
 
+// eslint-disable-next-line react/prop-types
+function Navigation({ isModalOpen, setModalOpen, sideRef }) {
 
+  return (
 
-function Navigation({handler , openFunction, list }){
-
-
-    return (
-
-    <Ul className=" row no-gutters NavUl" handler={handler}  list={list} >
+    <Ul ref={sideRef} className=" row no-gutters NavUl" isModalOpen={isModalOpen} >
       <li className=" col-md-12 NavList switcher" >
-        <a href="/" className='language'>
-          <p className='language_wrapper wrap1'>
+        <a href="/" className="language">
+          <p className="language_wrapper wrap1">
           English
           </p>
         </a>
-        <a  href="/" onClick={openFunction} className='close'>
-            <p className='textClose'>CLOSE</p>
-         <ion-icon className='lola' name="close-outline"> </ion-icon>
-
-        </a>
+        <button href="/" onClick={setModalOpen} className="close">
+          <p className="textClose">CLOSE</p>
+          <ion-icon className="lola" name="close-outline"> </ion-icon>
+        </button>
       </li>
-      <li className=" col-md-12 NavList" > <a href='/'>Register/Log in</a></li>
-      <li className="col-md-12 NavList"> <a href='/'>Home</a></li>
-      <li className=" col-md-12 NavList"> <a href='/'>Winners</a></li>
-      <li className=" col-md-12 NavList"> <a href='/'> Nominees</a></li>
-      <li className=" col-md-12 NavList"> <a href='/'>Collections</a></li>
-      <li className="col-md-12 NavList"> <a href='/'> Academy</a></li>
-      <li className="col-md-12 NavList"> <a href='/'>Professional directory</a></li>
-      <li className="col-md-12 NavList"> <a href='/'>Jobs & Talent</a></li>
-      <li className="col-md-12 NavList"> <a href='/'>Blog</a></li>
-      <li className="col-md-12 NavList"> <a href='/'>eBooks & Publications  </a></li>
-      <li className="col-md-12 NavList"> <a href='/'>JURY2020</a></li>
-      <li className="col-md-12 NavList"> <a href='/'>Conferences</a></li>
-
-
-
-
+      <li className=" col-md-12 NavList" > <a href="/">Register/Log in</a></li>
+      <li className="col-md-12 NavList"> <a href="/">Home</a></li>
+      <li className=" col-md-12 NavList"> <a href="/">Winners</a></li>
+      <li className=" col-md-12 NavList"> <a href="/"> Nominees</a></li>
+      <li className=" col-md-12 NavList"> <a href="/">Collections</a></li>
+      <li className="col-md-12 NavList"> <a href="/"> Academy</a></li>
+      <li className="col-md-12 NavList"> <a href="/">Professional directory</a></li>
+      <li className="col-md-12 NavList"> <a href="/">Jobs & Talent</a></li>
+      <li className="col-md-12 NavList"> <a href="/">Blog</a></li>
+      <li className="col-md-12 NavList"> <a href="/">eBooks & Publications  </a></li>
+      <li className="col-md-12 NavList"> <a href="/">JURY2020</a></li>
+      <li className="col-md-12 NavList"> <a href="/">Conferences</a></li>
     </Ul>
-
-
-)
+  )
 }
 
 export default Navigation;

@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react'
+import React, { useState, useRef } from "react"
 import styled from "styled-components";
 
 
@@ -57,38 +57,29 @@ transition: 300ms ease-in-out;
 
 transform: scaleX(1);
 }  
-
-
-
-
-
-
 `;
 
 function App() {
-    const [open, setOpen  ] = useState(false);
-    const [lol, lolOpen] = useState(false);
-    const openFunction = () => setOpen(!open);
-    const lolo = () => lolOpen(!lol) ;
-    const ref = useRef();
-    // State for our modal
-    const [isModalOpen, setModalOpen] = useState(false);
-    // Call hook passing in the ref and a function to call on outside click
-    useOnClickOutside(ref, () => setModalOpen(false));
-          const switcher =  setModalOpen(true)
+  const [isModalOpen, setModalOpen] = useState(false);
+  const ref = useRef();
 
+  useOnClickOutside(ref, () => setModalOpen(false));
 
+  const switcher = () => setModalOpen(true);
 
-
-    return (
-  <Markup    className='container-fluid'   >
+  return (
+    <Markup className="container-fluid" >
       {isModalOpen ?
-      < Navigation handler={open} openFunction={openFunction} onClick={switcher}/>    :
+        <Navigation
+          sideRef={ref}
+          isModalOpen={isModalOpen}
+          setModalOpen={() => setModalOpen(false)}
+        /> :
 
-          < Side open={open} openFunction={openFunction} lol={lol} lolo={lolo} ref={ref} />
+        <Side switcher={switcher} />
 
       }
-  </Markup>
+    </Markup>
 
 
   );

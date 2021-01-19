@@ -5,9 +5,17 @@
   "dependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-scripts": "^4.0.1",
+    "react-scripts": "3.4.4",
     "styled-components": "^5.2.1",
-    "web-vitals": "^1.1.0"
+    "web-vitals": "^1.1.0",
+    "eslint": "^6.6.0",
+    "eslint-config-react-app": "^5.2.1",
+    "eslint-loader": "3.0.3",
+    "eslint-plugin-flowtype": "4.6.0",
+    "eslint-plugin-import": "2.20.1",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-react": "7.19.0",
+    "eslint-plugin-react-hooks": "^1.6.1"
   },
   "scripts": {
     "start": "react-scripts start",

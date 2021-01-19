@@ -13,12 +13,12 @@ position: absolute;
 z-index: ${({open})=>open ? -2 : 0};
 opacity: ${({open})=>open ? 0.3 : 1};
 `;
-function RightSide({open, openFunction, lol, lolo}) {
+function RightSide({open, openFunction, lol, lolo, switcher}) {
 
 return (
 
 <Main open = {open } openFunction={openFunction}>
-<Header openFunction={openFunction} open={open} lol={lol} lolo={lolo}/>
+<Header switcher={switcher} openFunction={openFunction} open={open} lol={lol} lolo={lolo}/>
 </Main>
 
 )

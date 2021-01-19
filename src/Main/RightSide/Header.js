@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import BurgerMenu from "../../BurgerMenu";
 import styled from "styled-components";
 
@@ -53,20 +53,20 @@ display: flex;
    
    }
 `;
-function Header({open, openFunction, lol, lolo}) {
- return (
-     <StyledHeader open={open} openFunction={openFunction}>
-         <div className='container parent_container'>
-         <div className='row styledHeader_child'>
-         <div className='col-lg-1 Wrapper_Burger'  >
-             <BurgerMenu openFunction={openFunction} slider={open} lol={lol} lolo={lolo} />
-             <p className='menu'>Menu</p>
-         </div>
-         <div className="col-lg-7 second" > 2 </div>
-         <div className="col-lg-3 second"  > 3 wertyuiop[sdfghjkdfgh dsfgbvhmnl.adsdcfvhmnlasdfghjkl;SADFGHJKL;container</div>
-         </div>
-         </div>
-     </StyledHeader>
- )
+function Header({ open, openFunction, lol, lolo, switcher }) {
+  return (
+    <StyledHeader open={open} openFunction={openFunction}>
+      <div className="container parent_container">
+        <div className="row styledHeader_child">
+          <div className="col-lg-1 Wrapper_Burger" >
+            <BurgerMenu openFunction={switcher} slider={open} lol={lol} lolo={lolo} />
+            <p className="menu">Menu</p>
+          </div>
+          <div className="col-lg-7 second" > 2 </div>
+          <div className="col-lg-3 second" > 3 wertyuiop[sdfghjkdfgh dsfgbvhmnl.adsdcfvhmnlasdfghjkl;SADFGHJKL;container</div>
+        </div>
+      </div>
+    </StyledHeader>
+  )
 }
 export default Header;
